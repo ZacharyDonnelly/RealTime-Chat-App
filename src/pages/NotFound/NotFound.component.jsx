@@ -23,7 +23,10 @@ const NotFound = () => {
         </span>
         <span style={{ display: "block" }}>{"}"}</span>
         <span style={{ color: "#777", fontStyle: "italic" }}>
-          // <a href="/">Go home!</a>
+          //{" "}
+          <a className="notfound-a" href="/">
+            Go home!
+          </a>
         </span>
       </span>
     </div>
