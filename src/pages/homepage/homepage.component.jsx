@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import "./homepage.styles.scss";
 
 class HomePage extends React.Component {
@@ -11,6 +10,8 @@ class HomePage extends React.Component {
     document.body.style.overflow = "";
   }
 
+  handleClick = () => {};
+
   render() {
     return (
       <div className="main-home">
@@ -20,7 +21,7 @@ class HomePage extends React.Component {
         </div>
         <button
           className="homepage-btn"
-          onClick={() => <Redirect to="/signin" />}
+          onClick={() => this.props.history.push("/signin")}
         >
           Go To Blog
         </button>

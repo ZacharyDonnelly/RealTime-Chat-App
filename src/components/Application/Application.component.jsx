@@ -1,5 +1,4 @@
 import React from "react";
-import { signInWithGoogle } from "../../firebase/firebase.utils";
 
 import "./Application.styles.scss";
 
