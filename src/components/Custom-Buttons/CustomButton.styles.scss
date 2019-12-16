@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+.custom-button {
+  width: 345px;
+  height: 70px;
+  margin: 11px auto;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &.gplus {
+    background: #f2553b;
+    border-bottom: 2px solid #a62518;
+  }
+}
+
+.fa {
+  font-size: 2.5em;
+}
+
+.fa-gplus {
+  color: #aa2619;
+  border-right: 1px solid #d4382b;
+}
+
+.icons {
+  text-align: center;
+  width: 60px;
+  padding: 6px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.signtext {
+  color: #fff;
+}
+
+.signtext {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  position: absolute;
+  left: 100px;
+  top: 21px;
+}
+
+.custom-button:hover {
+  box-shadow: 0px 10px 5px -10px #000;
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  transition: 0.5s ease;
+}

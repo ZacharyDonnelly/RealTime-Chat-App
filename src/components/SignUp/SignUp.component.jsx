@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
+
 import FormInput from "../form-input/form-input.component";
 
 import "./SignUp.styles.scss";
+import CustomButton from "../Custom-Buttons/CustomButton.component";
 
-export default class SignUp extends Component {
+export default class SignUp extends React.Component {
   render() {
     return (
       <div className="sign-up">
@@ -30,13 +32,7 @@ export default class SignUp extends Component {
           label="Password"
           required
         />
-        <FormInput
-          type="text"
-          name="confirmPassword"
-          value="confirmPassword"
-          label="Confirm Password"
-          required
-        />
+        <CustomButton choice={"up"} />
       </div>
     );
   }

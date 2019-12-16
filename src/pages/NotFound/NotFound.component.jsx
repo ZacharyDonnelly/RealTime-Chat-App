@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div className="code-area">
       <span style={{ color: "#777", fontStyle: "italic" }}>
-        // 404 page not found.
+        404 page not found.
       </span>
       <span>
         <span style={{ color: "#d65562" }}>if</span>(
@@ -23,7 +23,7 @@ const NotFound = () => {
         </span>
         <span style={{ display: "block" }}>{"}"}</span>
         <span style={{ color: "#777", fontStyle: "italic" }}>
-          //{" "}
+          {" "}
           <a className="notfound-a" href="/">
             Go home!
           </a>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FormInput from "../form-input/form-input.component";
+import CustomButton from "../Custom-Buttons/CustomButton.component";
 
 export default class SignIn extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class SignIn extends Component {
             required
           />
         </form>
+        <CustomButton choice={"in"} />
       </div>
     );
   }
