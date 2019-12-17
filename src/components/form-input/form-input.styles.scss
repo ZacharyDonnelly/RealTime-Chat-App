@@ -15,14 +15,15 @@ $main-color: black;
     background: none;
     background-color: white;
     color: $sub-color;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    font-size: 16px;
+    padding: 10px 10px 0 5px;
     width: 100%;
     display: block;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $sub-color;
-    margin: 25px 0;
+    margin: 25px 0 5px 0;
+    text-transform: uppercase;
 
     &:focus {
       outline: none;

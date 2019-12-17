@@ -33,6 +33,13 @@ export default class SignUp extends React.Component {
           label="Password"
           required
         />
+        <FormInput
+          type="text"
+          name="confirmPassword"
+          value="confirm password"
+          label="Confirm Password"
+          required
+        />
         <CustomLogin choice={"Sign-up"} />
         <CustomButton choice={"up"} />
       </div>
