@@ -1,47 +1,74 @@
 import React from "react";
 
 import FormInput from "../form-input/form-input.component";
-
-import "./SignUp.styles.scss";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
 
+import "./SignUp.styles.scss";
+import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
+
 export default class SignUp extends React.Component {
+  state = {
+    displayName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    user: ""
+  };
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
+  componentDidMount = async () => {
+    auth.onAuthStateChanged(user => {
+      console.log(user);
+      this.setState({ user });
+    });
+  };
+
   render() {
     return (
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
         <span>Sign up with your email and password</span>
-        <FormInput
-          type="text"
-          name="displayName"
-          value="display name"
-          label="Display Name"
-          required
-        />
-        <FormInput
-          type="text"
-          name="email"
-          value="email"
-          label="Email"
-          required
-        />
-        <FormInput
-          type="text"
-          name="password"
-          value="password"
-          label="Password"
-          required
-        />
-        <FormInput
-          type="text"
-          name="confirmPassword"
-          value="confirm password"
-          label="Confirm Password"
-          required
-        />
-        <CustomLogin choice={"Sign-up"} />
-        <CustomButton choice={"up"} />
+        <form className="sign-up-form">
+          <FormInput
+            type="text"
+            name="displayName"
+            handleChange={this.handleChange}
+            value={this.state.displayName}
+            label="Display Name"
+            required
+          />
+          <FormInput
+            type="text"
+            name="email"
+            handleChange={this.handleChange}
+            value={this.state.email}
+            label="Email"
+            required
+          />
+          <FormInput
+            type="password"
+            name="password"
+            handleChange={this.handleChange}
+            value={this.state.password}
+            label="Password"
+            required
+          />
+          <FormInput
+            type="password"
+            name="confirmPassword"
+            handleChange={this.handleChange}
+            value={this.state.confirmPassword}
+            label="Confirm Password"
+            required
+          />
+        </form>
+        <CustomLogin choice={"Sign-up"} onClick={signInWithGoogle} />
+        <CustomButton choice={"up"} onClick={this.handleSubmit} />
       </div>
     );
   }

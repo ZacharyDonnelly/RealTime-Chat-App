@@ -3,7 +3,21 @@ import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
+import "./SignIn.styles.scss";
+
 export default class SignIn extends Component {
+  state = {
+    email: "",
+    password: ""
+  };
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
   render() {
     return (
       <div className="sign-in">
@@ -14,19 +28,21 @@ export default class SignIn extends Component {
           <FormInput
             name="email"
             type="email"
-            label="email"
-            value="temp"
+            label="Email"
+            handleChange={this.handleChange}
+            value={this.state.email}
             required
           />
           <FormInput
             name="password"
             type="password"
-            value="temp"
-            label="password"
+            handleChange={this.handleChange}
+            value={this.state.password}
+            label="Password"
             required
           />
         </form>
-        <CustomLogin choice={"Sign-in"} />
+        <CustomLogin choice={"Sign-in"} onClick={signInWithGoogle} />
         <CustomButton choice={"in"} />
       </div>
     );
