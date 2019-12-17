@@ -12,7 +12,7 @@ class HomePage extends React.Component {
         <button
           className="homepage-btn"
           onClick={() => this.props.history.push("/signin")}>
-          Go To Blog
+          Go To Chat
         </button>
       </div>
     );

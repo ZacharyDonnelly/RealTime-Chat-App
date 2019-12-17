@@ -1,11 +1,11 @@
 import React from "react";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
 
 import "./SignUp.styles.scss";
-import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
 
 export default class SignUp extends React.Component {
   state = {
@@ -19,13 +19,6 @@ export default class SignUp extends React.Component {
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-  };
-
-  componentDidMount = async () => {
-    auth.onAuthStateChanged(user => {
-      console.log(user);
-      this.setState({ user });
-    });
   };
 
   render() {

@@ -1,16 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
+import { auth } from "../../firebase/firebase.utils";
+import { Redirect } from "react-router-dom";
+
 import SignIn from "../../components/SignIn/SignIn.component";
 import SignUp from "../../components/SignUp/SignUp.component";
 
 import "./signin-and-signup.styles.scss";
 
-const SignInAndSignUp = () => {
-  return (
-    <div className="sign-in-and-sign-up">
-      <SignIn />
-      <SignUp />
-    </div>
-  );
-};
+export default class SignInAndSignUp extends Component {
+  state = {
+    user: null
+  };
+  componentDidMount = async () => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      console.log(user);
+      this.setState({ user });
+    });
+  };
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
 
-export default SignInAndSignUp;
+  render() {
+    const { user } = this.state;
+    if (user) {
+      return <Redirect to="/chat" />;
+    }
+    return (
+      <div className="sign-in-and-sign-up">
+        <SignIn />
+        <SignUp />
+      </div>
+    );
+  }
+}
