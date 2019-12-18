@@ -2,7 +2,7 @@ import React from "react";
 
 import { signOut } from "../../firebase/firebase.utils";
 
-const CurrentUser = ({ displayName, photoURL, email, createdAt, children }) => {
+const CurrentUser = ({ displayName, photoURL, email, children }) => {
   return (
     <section className="CurrentUser">
       <div className="CurrentUser--profile">
@@ -10,7 +10,6 @@ const CurrentUser = ({ displayName, photoURL, email, createdAt, children }) => {
         <div className="CurrentUser--information">
           <h2>{displayName}</h2>
           <p className="email">{email}</p>
-          <p className="created-at">{moment(createdAt).calendar()}</p>
         </div>
       </div>
       <div>

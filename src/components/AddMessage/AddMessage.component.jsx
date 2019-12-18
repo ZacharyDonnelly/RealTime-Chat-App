@@ -5,21 +5,14 @@ import "./AddMessage.styles.scss";
 
 export default class AddMessage extends React.Component {
   state = {
-    message: ""
-  };
-
-  handleChange = e => {
-    const [name, value] = e.target;
-    this.setState({
-      [name]: value
-    });
+    message: "",
+    user: ""
   };
 
   handleSubmit = async e => {
     e.preventDefault();
     const { message } = this.state;
-
-    const post = {
+    let post = {
       message,
       user: {
         uid: "1111",
@@ -31,20 +24,20 @@ export default class AddMessage extends React.Component {
     firestore.collection("messages").add(post);
 
     this.setState({ message: "" });
+    console.log(this.state.message);
   };
 
   render() {
-    const { message } = this.state;
     return (
       <form onSubmit={this.handleSubmit} className="AddPost">
         <input
           type="text"
           name="message"
           placeholder="Enter Message"
-          value={message}
-          onChange={this.handleChange}
+          value={this.state.message}
+          onChange={e => this.setState({ message: e.target.value })}
         />
-        <input className="create" type="submit" value="Create Post" />
+        <input className="create" type="submit" value="Create Message" />
       </form>
     );
   }

@@ -2,13 +2,12 @@ import React from "react";
 import { signOut } from "../../firebase/firebase.utils";
 import { auth } from "../../firebase/firebase.utils";
 import { firestore } from "../../firebase/firebase.utils";
-import { collectIdsAndDocs } from "../../firebase/firebase.utils";
+import { collectIdsAndDocs } from "../../utils/utilities";
 
 import Messages from "../Messages/Messages.component";
 import Auth from "../Auth/Auth.component";
 
 import "./Application.styles.scss";
-
 class Application extends React.Component {
   state = {
     messages: [],
@@ -39,14 +38,13 @@ class Application extends React.Component {
 
   handleClick = () => {
     signOut();
-    return this.props.history.push("/");
   };
 
   render() {
     return (
       <div>
-        <h2>filler</h2>
         <Auth user={this.state.user} />
+        <Messages messages={this.state.messages} />
       </div>
     );
   }

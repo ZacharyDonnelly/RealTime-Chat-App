@@ -15,7 +15,7 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/signin" component={SignInAndSignUp} />
-          <Route path="/chat" component={Application} />
+          <Route exact path="/chat" component={Application} />
           <Route component={NotFound} />
         </Switch>
       </div>
