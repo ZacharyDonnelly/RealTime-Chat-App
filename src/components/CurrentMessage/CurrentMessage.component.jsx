@@ -1,15 +1,19 @@
 import React from "react";
 
-const CurrentMessage = ({ message, user }) => {
+import "./CurrentMessage.styles.scss";
+
+const CurrentMessage = ({ message, user: { displayName } }) => {
   return (
-    <article className="Message">
-      <div className="Message--meta">
-        <div>{message}</div>
-      </div>
-      <div className="User--meta">
-        <p>Posted by {user.displayName}</p>
-      </div>
-    </article>
+    <div className="message-container">
+      <article className="Message">
+        <div className="Message--meta">
+          <div>{message}</div>
+        </div>
+        <div className="User--meta">
+          <p>Posted by {displayName}</p>
+        </div>
+      </article>
+    </div>
   );
 };
 

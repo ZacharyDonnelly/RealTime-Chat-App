@@ -1,0 +1,30 @@
+$message-color: darken(#1ab188, 5%);
+
+.Message {
+  margin: 25px 25px 1em 0;
+  border: 1px solid black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $message-color;
+}
+
+.Post--content {
+  padding: 1em;
+  margin-top: 0;
+}
+
+.Message--meta {
+  padding: 0.5em;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  p {
+    display: inline-block;
+    margin: 1em;
+  }
+}

@@ -1,0 +1,34 @@
+$button-color: #1ab188;
+$button-dark: darken($button-color, 5%);
+
+.add-message {
+  height: 30px;
+  width: 450px;
+  font-size: 0.99em;
+}
+
+.create {
+  margin-left: 5px;
+  height: 45px;
+  width: 150px;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: $button-color;
+  color: #fff;
+  transition: all.5s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  &:hover {
+    background: $button-dark;
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(1.015);
+  }
+}

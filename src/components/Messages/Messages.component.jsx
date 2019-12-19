@@ -6,7 +6,7 @@ import AddMessage from "../AddMessage/AddMessage.component";
 
 const Messages = ({ messages }) => {
   return (
-    <section>
+    <section className="all-messages">
       <AddMessage />
       {messages.map(message => (
         <CurrentMessage {...message} key={message.id} />

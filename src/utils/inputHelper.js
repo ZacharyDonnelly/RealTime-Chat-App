@@ -1,16 +1,9 @@
-export const collectIdsAndDocs = doc => {
-  return {
-    id: doc.id,
-    ...doc.data()
-  };
-};
-
 export const inputHelper = stated => {
   return [...stated].join("");
 };
 
-export const styleFunc = stated => {
-  if (stated.length > 60) {
+export const colors = stated => {
+  if (stated.length > 20) {
     return { paddingBottom: 50, paddingTop: 10 };
   } else {
     return { height: 30 };
