@@ -1,5 +1,4 @@
 import React from "react";
-import { signOut } from "../../firebase/firebase.utils";
 import { auth } from "../../firebase/firebase.utils";
 import { firestore } from "../../firebase/firebase.utils";
 import { collectIdsAndDocs } from "../../utils/utilities";
@@ -34,10 +33,6 @@ class Application extends React.Component {
 
   componentWillUnmount = () => {
     this.unsubscribeFromFirestore();
-  };
-
-  handleClick = () => {
-    signOut();
   };
 
   render() {

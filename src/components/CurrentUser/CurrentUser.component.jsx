@@ -1,6 +1,7 @@
 import React from "react";
 
 import { signOut } from "../../firebase/firebase.utils";
+import { Link } from "react-router-dom";
 
 const CurrentUser = ({ displayName, photoURL, email, children }) => {
   return (
@@ -14,7 +15,9 @@ const CurrentUser = ({ displayName, photoURL, email, children }) => {
       </div>
       <div>
         <div>{children}</div>
-        <button onClick={signOut}>Sign Out</button>
+        <Link to="/" onClick={signOut}>
+          Sign Out
+        </Link>
       </div>
     </section>
   );
