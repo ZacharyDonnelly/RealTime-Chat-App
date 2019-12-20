@@ -1,37 +1,22 @@
 import React from "react";
 import { auth } from "../../firebase/firebase.utils";
-import { firestore } from "../../firebase/firebase.utils";
-import { collectIdsAndDocs } from "../../utils/utilities";
 
 import Messages from "../Messages/Messages.component";
 import Auth from "../Auth/Auth.component";
 
 import "./Application.styles.scss";
+
 class Application extends React.Component {
   state = {
-    messages: [],
     user: null
   };
 
-  unsubscribeFromFirestore = null;
   unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
-    this.unsubscribeFromFirestore = firestore
-      .collection("messages")
-      .onSnapshot(snapshot => {
-        const messages = snapshot.docs.map(collectIdsAndDocs);
-        this.setState({
-          messages
-        });
-      });
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ user });
     });
-  };
-
-  componentWillUnmount = () => {
-    this.unsubscribeFromFirestore();
   };
 
   render() {
