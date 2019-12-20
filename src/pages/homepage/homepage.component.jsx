@@ -7,7 +7,7 @@ class HomePage extends React.Component {
       <div className="main-home">
         <div className="homepage-image-container"></div>
         <div className="homepage-text">
-          <h1 className="homepage-header">Welcome</h1>
+          <h1 className="homepage-header">ChattR</h1>
         </div>
         <button
           className="homepage-btn"
