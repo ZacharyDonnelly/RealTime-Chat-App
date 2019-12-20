@@ -3,6 +3,7 @@ import React from "react";
 import { signOut } from "../../firebase/firebase.utils";
 import { Link } from "react-router-dom";
 
+import "./CurrentUser.styles.scss";
 const CurrentUser = ({ displayName, photoURL, email, children }) => {
   return (
     <section className="CurrentUser">

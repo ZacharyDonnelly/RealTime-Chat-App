@@ -45,6 +45,8 @@ $main-color: black;
     pointer-events: none;
     left: 5px;
     top: 10px;
+    -webkit-transition: 300ms ease all;
+    -o-transition: 300ms ease all;
     transition: 300ms ease all;
 
     &.shrink {

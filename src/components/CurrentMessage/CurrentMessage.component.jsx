@@ -10,7 +10,7 @@ const CurrentMessage = ({ message, user: { displayName } }) => {
           <div>{message}</div>
         </div>
         <div className="User--meta">
-          <p>Posted by {displayName}</p>
+          <p>{displayName}</p>
         </div>
       </article>
     </div>
@@ -21,8 +21,7 @@ CurrentMessage.defaultProps = {
   user: {
     id: "123",
     displayName: "Bill Murray",
-    email: "billmurray@mailinator.com",
-    photoURL: "https://www.fillmurray.com/300/300"
+    email: "test@test.com"
   },
   createdAt: new Date()
 };

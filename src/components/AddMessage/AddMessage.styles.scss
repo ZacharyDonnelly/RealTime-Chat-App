@@ -21,14 +21,21 @@ $button-dark: darken($button-color, 5%);
   letter-spacing: 0.1em;
   background: $button-color;
   color: #fff;
+  -webkit-transition: all.5s ease;
+  -o-transition: all.5s ease;
   transition: all.5s ease;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   &:hover {
     background: $button-dark;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
     transform: scale(1.01);
   }
   &:active {
+    -webkit-transform: scale(1.015);
+    -ms-transform: scale(1.015);
     transform: scale(1.015);
   }
 }

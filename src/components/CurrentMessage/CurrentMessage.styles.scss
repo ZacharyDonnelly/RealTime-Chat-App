@@ -3,9 +3,17 @@ $message-color: darken(#1ab188, 5%);
 .Message {
   margin: 25px 25px 1em 0;
   border: 1px solid black;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   background-color: $message-color;
@@ -19,8 +27,14 @@ $message-color: darken(#1ab188, 5%);
 .Message--meta {
   padding: 0.5em;
   border-bottom: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   p {
