@@ -1,48 +1,42 @@
 $button-color: #1ab188;
 $button-dark: darken($button-color, 5%);
 
+.AddPost {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.Message {
+  margin-bottom: 25px;
+}
+
 .add-message {
+  position: absolute;
+  bottom: 15px;
+  left: 225px;
   height: 30px;
   width: 450px;
   font-size: 0.99em;
-  background-color: #333;
+  background: -o-repeating-linear-gradient(
+    bottom,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px
+  );
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px
+  );
   border: none;
   color: #fff;
 
   &:focus {
     outline: none;
-  }
-}
-
-.create {
-  margin-left: 5px;
-  height: 45px;
-  width: 150px;
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: $button-color;
-  color: #fff;
-  -webkit-transition: all.5s ease;
-  -o-transition: all.5s ease;
-  transition: all.5s ease;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  &:hover {
-    background: $button-dark;
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    transform: scale(1.01);
-  }
-  &:active {
-    -webkit-transform: scale(1.015);
-    -ms-transform: scale(1.015);
-    transform: scale(1.015);
   }
 }

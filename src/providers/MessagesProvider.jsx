@@ -12,6 +12,7 @@ export default class MessagesProvider extends React.Component {
   componentDidMount = async () => {
     this.unsubscribeFromFirestore = firestore
       .collection("messages")
+      .orderBy("createdAt")
       .onSnapshot(snapshot => {
         const messages = snapshot.docs.map(collectIdsAndDocs);
         this.setState({

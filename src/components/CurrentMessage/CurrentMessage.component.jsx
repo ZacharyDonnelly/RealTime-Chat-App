@@ -1,16 +1,18 @@
 import React from "react";
-
 import "./CurrentMessage.styles.scss";
 
 const CurrentMessage = ({ message, user: { displayName } }) => {
   return (
     <div className="message-container">
-      <article className="Message">
-        <div className="Message--meta">
-          <div>{message}</div>
-        </div>
+      <article className="messages">
         <div className="User--meta">
-          <p>{displayName}</p>
+          <p>
+            <span style={{ color: "red" }}>{displayName}</span>
+            <span style={{ color: "black" }}>@dev:</span>
+          </p>
+        </div>
+        <div className="Message--meta">
+          <p>{message}</p>
         </div>
       </article>
     </div>
@@ -19,7 +21,6 @@ const CurrentMessage = ({ message, user: { displayName } }) => {
 
 CurrentMessage.defaultProps = {
   user: {
-    id: "123",
     displayName: "Bill Murray",
     email: "test@test.com"
   },

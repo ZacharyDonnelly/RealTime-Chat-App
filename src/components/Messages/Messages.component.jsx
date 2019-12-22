@@ -11,7 +11,9 @@ const Messages = () => {
     <section className="all-messages">
       <AddMessage />
       {messages.map(message => (
-        <CurrentMessage {...message} key={message.id} />
+        <div className="individual-message">
+          <CurrentMessage {...message} key={message.id} />
+        </div>
       ))}
     </section>
   );

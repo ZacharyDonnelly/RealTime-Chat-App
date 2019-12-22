@@ -44,7 +44,7 @@ export default class AddMessage extends React.Component {
           value={inputHelper(this.state.message)}
           onChange={e => this.setState({ message: e.target.value })}
         />
-        <input className="create" type="submit" value="Create Message" />
+        {/* <input className="create" type="submit" value="Create Message" /> */}
       </form>
     );
   }

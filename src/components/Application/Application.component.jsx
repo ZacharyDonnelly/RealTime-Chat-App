@@ -14,7 +14,6 @@ class Application extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
-    document.body.style.background = "#333";
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ user });
     });
@@ -24,7 +23,7 @@ class Application extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="main-bg">
         <Auth user={this.state.user} />
         <Messages />
       </div>
