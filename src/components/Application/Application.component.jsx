@@ -14,16 +14,19 @@ class Application extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
+    document.body.style.background = "#333";
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ user });
     });
   };
-
+  componentWillUnmount = () => {
+    document.body.style.background = "white";
+  };
   render() {
     return (
       <div>
         <Auth user={this.state.user} />
-        <Messages messages={this.state.messages} />
+        <Messages />
       </div>
     );
   }

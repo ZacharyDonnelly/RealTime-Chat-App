@@ -5,6 +5,13 @@ $button-dark: darken($button-color, 5%);
   height: 30px;
   width: 450px;
   font-size: 0.99em;
+  background-color: #333;
+  border: none;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .create {
