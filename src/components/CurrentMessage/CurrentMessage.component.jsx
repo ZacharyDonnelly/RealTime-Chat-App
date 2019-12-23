@@ -7,8 +7,8 @@ const CurrentMessage = ({ message, user }) => {
       <article className="messages">
         <div className="User--meta">
           <p>
-            <span style={{ color: "red" }}>{user.displayName}</span>
-            <span style={{ color: "black" }}>@dev:</span>
+            <span style={{ color: "#fff" }}>{user.displayName}</span>
+            <span style={{ color: "red", marginRight: 5 }}>@dev:</span>
           </p>
         </div>
         <div className="Message--meta">
