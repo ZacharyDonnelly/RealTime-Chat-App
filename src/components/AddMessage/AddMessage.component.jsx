@@ -11,6 +11,15 @@ export default class AddMessage extends React.Component {
     user: ""
   };
 
+  componentDidMount = () => {
+    this.setState({
+      user: {
+        displayName: this.props.displayName,
+        uid: this.props.uid,
+        email: this.props.email
+      }
+    });
+  };
   handleSubmit = async e => {
     e.preventDefault();
     if (!this.state.message) {
@@ -20,9 +29,9 @@ export default class AddMessage extends React.Component {
       let post = {
         message,
         user: {
-          uid: "1111",
-          displayName: "Test User",
-          email: "test@test.com"
+          displayName: this.props.displayName,
+          uid: this.props.uid,
+          email: this.props.email
         },
         createdAt: new Date()
       };
@@ -44,7 +53,6 @@ export default class AddMessage extends React.Component {
           value={inputHelper(this.state.message)}
           onChange={e => this.setState({ message: e.target.value })}
         />
-        {/* <input className="create" type="submit" value="Create Message" /> */}
       </form>
     );
   }

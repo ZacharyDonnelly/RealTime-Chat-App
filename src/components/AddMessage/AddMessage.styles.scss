@@ -17,11 +17,11 @@ $button-dark: darken($button-color, 5%);
 }
 
 .add-message {
-  position: absolute;
-  bottom: 15px;
-  left: 225px;
+  position: relative;
+  bottom: 4.5px;
+  left: 275px;
   height: 30px;
-  width: 450px;
+  width: 600px;
   font-size: 0.99em;
   background: -o-repeating-linear-gradient(
     bottom,

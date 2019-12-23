@@ -22,10 +22,11 @@ class Application extends React.Component {
     document.body.style.background = "white";
   };
   render() {
+    const { user } = this.state;
     return (
       <div className="main-bg">
-        <Auth user={this.state.user} />
-        <Messages />
+        <Auth user={user} />
+        <Messages {...user} />
       </div>
     );
   }

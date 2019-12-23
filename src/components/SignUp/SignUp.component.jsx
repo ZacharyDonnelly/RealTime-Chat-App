@@ -1,6 +1,6 @@
 import React from "react";
 
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
@@ -9,8 +9,8 @@ import "./SignUp.styles.scss";
 
 export default class SignUp extends React.Component {
   state = {
-    displayName: "",
     email: "",
+    displayName: "",
     password: "",
     confirmPassword: "",
     user: ""
@@ -21,12 +21,29 @@ export default class SignUp extends React.Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = async e => {
+    e.preventDefault();
+
+    const { email, password, displayName } = this.state;
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      user.updateProfile({ displayName });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   render() {
     return (
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
         <span>Sign up with your email and password</span>
-        <form className="sign-up-form">
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
