@@ -1,13 +1,13 @@
 import React from "react";
 import "./CurrentMessage.styles.scss";
 
-const CurrentMessage = ({ message, user: { displayName } }) => {
+const CurrentMessage = ({ message, user }) => {
   return (
     <div className="message-container">
       <article className="messages">
         <div className="User--meta">
           <p>
-            <span style={{ color: "red" }}>{displayName}</span>
+            <span style={{ color: "red" }}>{user.displayName}</span>
             <span style={{ color: "black" }}>@dev:</span>
           </p>
         </div>

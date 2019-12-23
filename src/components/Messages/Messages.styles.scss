@@ -2,10 +2,73 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column-reverse;
+  left: 25%;
+  top: 25%;
   position: absolute;
+  height: 455px;
   bottom: 5px;
+  background: #e0e8f0;
+  overflow: auto;
+  z-index: 50;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.window {
+  height: 425px;
+  display: inline-block;
+  margin-top: 30px;
+  overflow-y: auto;
+  width: 850px;
+  background-color: #30353a;
+  border-bottom: 3px solid #30353a;
+  z-index: 0;
+}
+
+.buttons {
+  margin: 0 50px;
+}
+
+.green {
+  background: #3bb662;
+  width: 0.75rem;
+  height: 0.75rem;
+  z-index: 100;
+  margin: 0.625rem 0.25rem 0 0;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.0001%;
+  left: 5%;
+}
+
+.yellow {
+  background: #e5c30f;
+  z-index: 100;
+  width: 0.75rem;
+  height: 0.75rem;
+  z-index: 100;
+  margin: 0.625rem 0.25rem 0 0;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.0001%;
+  left: 3%;
+}
+
+.red {
+  background: #e75448;
+  z-index: 100;
+  width: 0.75rem;
+  height: 0.75rem;
+  z-index: 100;
+  margin: 0.625rem 0.25rem 0 0;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.0001%;
+  left: 1%;
 }

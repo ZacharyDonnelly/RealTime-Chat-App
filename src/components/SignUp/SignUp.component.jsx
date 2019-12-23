@@ -24,6 +24,10 @@ export default class SignUp extends React.Component {
     e.preventDefault();
 
     const { email, password, displayName } = this.state;
+    if (!email || !password || !displayName) {
+      alert("Please fill in the form!");
+      return;
+    }
 
     try {
       const { user } = await auth.createUserWithEmailAndPassword(

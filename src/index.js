@@ -6,12 +6,15 @@ import MessagesProvider from "./providers/MessagesProvider";
 
 import "./index.css";
 import App from "./App";
+import UserProvider from "./providers/UserProvider";
 
 render(
-  <MessagesProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </MessagesProvider>,
+  <UserProvider>
+    <MessagesProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </MessagesProvider>
+  </UserProvider>,
   document.getElementById("root")
 );

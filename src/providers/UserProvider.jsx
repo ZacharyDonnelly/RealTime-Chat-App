@@ -1,36 +1,30 @@
 import React, { createContext } from "react";
-import { firestore } from "../firebase/firebase.utils";
-import { collectIdsAndDocs } from "../utils/utilities";
+import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
 
-export const MessagesContext = createContext();
+export const UserContext = createContext();
 
-export default class MessagesProvider extends React.Component {
-  state = { messages: [] };
+class UserProvider extends React.Component {
+  state = {
+    user: null
+  };
 
-  unsubscribeFromFirestore = null;
+  unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
-    this.unsubscribeFromFirestore = firestore
-      .collection("messages")
-      .orderBy("createdAt")
-      .onSnapshot(snapshot => {
-        const messages = snapshot.docs.map(collectIdsAndDocs);
-        this.setState({
-          messages
-        });
-      });
-  };
-  componentWillUnmount = () => {
-    this.unsubscribeFromFirestore();
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      const user = await createUserProfileDocument(userAuth);
+      console.log(user);
+      this.setState({ user });
+    });
   };
 
+  componentWillUnmount = () => {
+    this.unsubscribeFromAuth();
+  };
   render() {
-    const { messages } = this.state;
+    const { user } = this.state;
     const { children } = this.props;
-    return (
-      <MessagesContext.Provider value={messages}>
-        {children}
-      </MessagesContext.Provider>
-    );
+    return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
   }
 }
+export default UserProvider;

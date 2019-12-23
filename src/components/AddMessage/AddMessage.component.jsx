@@ -11,12 +11,13 @@ export default class AddMessage extends React.Component {
     user: ""
   };
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
+    const { displayName, uid, email } = this.props;
     this.setState({
       user: {
-        displayName: this.props.displayName,
-        uid: this.props.uid,
-        email: this.props.email
+        displayName,
+        uid,
+        email
       }
     });
   };
@@ -26,12 +27,13 @@ export default class AddMessage extends React.Component {
       alert("Please enter a message!");
     } else {
       const { message } = this.state;
+      const { displayName, uid, email } = this.props;
       let post = {
         message,
         user: {
-          displayName: this.props.displayName,
-          uid: this.props.uid,
-          email: this.props.email
+          displayName,
+          uid,
+          email
         },
         createdAt: new Date()
       };
