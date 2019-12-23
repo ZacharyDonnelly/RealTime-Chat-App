@@ -1,6 +1,6 @@
 import React from "react";
 
-import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
+import { auth } from "../../firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
@@ -12,7 +12,6 @@ export default class SignUp extends React.Component {
     email: "",
     displayName: "",
     password: "",
-    confirmPassword: "",
     user: ""
   };
 
@@ -36,6 +35,7 @@ export default class SignUp extends React.Component {
     } catch (error) {
       console.error(error);
     }
+    this.setState({ displayName: "", email: "", password: "" });
   };
 
   render() {
@@ -68,17 +68,9 @@ export default class SignUp extends React.Component {
             label="Password"
             required
           />
-          <FormInput
-            type="password"
-            name="confirmPassword"
-            handleChange={this.handleChange}
-            value={this.state.confirmPassword}
-            label="Confirm Password"
-            required
-          />
         </form>
-        <CustomLogin choice={"Sign-up"} onClick={signInWithGoogle} />
-        <CustomButton choice={"up"} onClick={this.handleSubmit} />
+        <CustomLogin buttonClicked={this.handleSubmit} />
+        <CustomButton choice={"up"} />
       </div>
     );
   }

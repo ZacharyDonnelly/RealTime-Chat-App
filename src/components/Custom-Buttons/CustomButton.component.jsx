@@ -13,4 +13,8 @@ const CustomButton = ({ choice }) => {
   );
 };
 
+CustomButton.defaultProps = {
+  choice: "up"
+};
+
 export default CustomButton;
