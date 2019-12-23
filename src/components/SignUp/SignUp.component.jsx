@@ -1,6 +1,6 @@
 import React from "react";
 
-import { auth } from "../../firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
@@ -31,7 +31,7 @@ export default class SignUp extends React.Component {
         password
       );
 
-      user.updateProfile({ displayName });
+      createUserProfileDocument(user, { displayName });
     } catch (error) {
       console.error(error);
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from "../../firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
 import Messages from "../Messages/Messages.component";
 import Auth from "../Auth/Auth.component";
@@ -14,7 +14,9 @@ class Application extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      const user = await createUserProfileDocument(userAuth);
+      console.log(user);
       this.setState({ user });
     });
   };
