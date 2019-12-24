@@ -12,4 +12,5 @@
 
 ## write tests
 
-Format: ![Main Page](C:\Users\John Smith\Downloads\main-page.png)
+![GitHub Logo](C:\Users\John Smith\Downloads\main-page.png)
+Format: ![Alt Text](url)
