@@ -12,4 +12,4 @@
 
 ## write tests
 
-[img]https://i.imgur.com/3RYaYy0.png[/img]
+![](https://imgur.com/a/Eo8H9ZC)
