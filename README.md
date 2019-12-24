@@ -12,5 +12,4 @@
 
 ## write tests
 
-<img src="C:\Users\John Smith\Downloads\main-page.png"
-     alt="main page" />
+<img src="https://imgur.com/3RYaYy0" alt="front page" />
