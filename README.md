@@ -11,5 +11,3 @@
 ## email authentication
 
 ## write tests
-
-<a href="//imgur.com/a/Eo8H9ZC"></a>
