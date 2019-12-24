@@ -21,7 +21,15 @@ export default class SignIn extends Component {
 
   handleClicked = async () => {
     const { email, password } = this.state;
-    await auth.signInWithEmailAndPassword(email, password);
+    if (!email || !password) {
+      alert("Please fill in required fields!");
+      return;
+    }
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.error("User auth error", error.message);
+    }
   };
 
   render() {
