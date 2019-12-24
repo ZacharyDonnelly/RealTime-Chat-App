@@ -9,4 +9,8 @@
 
 # TODOS
 
+## mailchimp newsletter
+
+## email authentication emails
+
 ## write tests
