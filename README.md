@@ -1,12 +1,3 @@
-# Will add later
-
-# TODOS
-
-## mailchimp newsletter
-
-## email authentication
-
-## write tests
 
 ![alt text](https://i.imgur.com/3RYaYy0.png)
 **Landing Page** Will be making slight alterations
@@ -18,5 +9,14 @@
 
 
 
-![alt text](https://i.imgur.com/bMAWcHS.png)
+![alt text](https://i.imgur.com/CuQFwg8.png)
 **Real Time Messaging Page** Real time messaging app
+
+
+# TODOS
+
+## mailchimp newsletter
+
+## email authentication emails
+
+## write tests
