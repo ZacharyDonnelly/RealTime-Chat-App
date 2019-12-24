@@ -12,4 +12,4 @@
 
 ## write tests
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="3RYaYy0"><a href="https://imgur.com/3RYaYy0">View post on imgur.com</a></blockquote>
+[img]https://i.imgur.com/3RYaYy0.png[/img]
