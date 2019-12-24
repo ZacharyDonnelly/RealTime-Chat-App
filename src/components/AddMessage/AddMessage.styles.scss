@@ -1,5 +1,6 @@
 $button-color: #1ab188;
 $button-dark: darken($button-color, 5%);
+$window-black: #30353a;
 
 .AddPost {
   margin-top: 15px;
@@ -18,25 +19,56 @@ $button-dark: darken($button-color, 5%);
 
 .add-message {
   position: relative;
-  bottom: 4.5px;
-  left: 275px;
-  height: 30px;
+  bottom: 0.5px;
+  left: 25px;
+  top: -22.5px;
+  caret-color: transparent !important;
+  height: 10px;
   width: 600px;
-  font-size: 0.99em;
-  background: -o-repeating-linear-gradient(
-    bottom,
-    rgba(black, 0.15),
-    rgba(black, 0.15) 1px
-  );
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(black, 0.15),
-    rgba(black, 0.15) 1px
-  );
+  font-size: 1.05em;
+  background: $window-black;
   border: none;
   color: #fff;
+  opacity: 1;
 
   &:focus {
     outline: none;
+  }
+}
+
+.blink {
+  position: absolute;
+  left: 25px;
+  color: #fff;
+  z-index: 500;
+
+  &::after {
+    content: "|";
+    -webkit-animation: blink 2s steps(1) infinite;
+    animation: blink 2s steps(1) infinite;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #fff;
   }
 }

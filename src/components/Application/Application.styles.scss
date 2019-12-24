@@ -1,5 +1,9 @@
 .main-bg {
-  background-color: black;
-  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  background: -webkit-radial-gradient(
+    top,
+    circle cover,
+    #00d2ff 0%,
+    #3a7bd5 80%
+  );
   height: 100vh;
 }

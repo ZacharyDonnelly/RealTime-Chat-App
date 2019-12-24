@@ -1,3 +1,12 @@
+$button-width-height: 0.75rem;
+$button-margin: 0.625rem 0.25rem 0 0;
+$button-zindex: 100;
+$button-top: 0.0001%;
+$button-border-radius: 0.5rem;
+$absolute-position: absolute;
+$window-black: #30353a;
+$twentyfive-percent: 25%;
+
 .all-messages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,12 +21,12 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 25%;
-  top: 25%;
-  position: absolute;
+  left: $twentyfive-percent;
+  top: $twentyfive-percent;
+  position: $absolute-position;
   height: 455px;
   bottom: 5px;
-  background: #e0e8f0;
+  background: rgb(246, 246, 246);
   z-index: 50;
   text-align: left;
   border-radius: 10px;
@@ -29,8 +38,8 @@
   margin-top: 30px;
   overflow-y: auto;
   width: 850px;
-  background-color: #30353a;
-  border-bottom: 3px solid #30353a;
+  background-color: $window-black;
+  border-bottom: 3px solid $window-black;
   z-index: 0;
 }
 
@@ -39,39 +48,67 @@
 }
 
 .green {
-  background: #3bb662;
-  width: 0.75rem;
-  height: 0.75rem;
-  z-index: 100;
-  margin: 0.625rem 0.25rem 0 0;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 0.0001%;
+  background: rgb(37, 204, 62);
+  width: $button-width-height;
+  height: $button-width-height;
+  z-index: $button-zindex;
+  margin: $button-margin;
+  border-radius: $button-border-radius;
+  position: $absolute-position;
+  top: $button-top;
   left: 5%;
 }
 
 .yellow {
-  background: #e5c30f;
-  z-index: 100;
-  width: 0.75rem;
-  height: 0.75rem;
-  z-index: 100;
-  margin: 0.625rem 0.25rem 0 0;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 0.0001%;
+  background: rgb(255, 191, 47);
+  z-index: $button-zindex;
+  width: $button-width-height;
+  height: $button-width-height;
+  margin: $button-margin;
+  border-radius: $button-border-radius;
+  position: $absolute-position;
+  top: $button-top;
   left: 3%;
 }
 
 .red {
-  background: #e75448;
-  z-index: 100;
-  width: 0.75rem;
-  height: 0.75rem;
-  z-index: 100;
-  margin: 0.625rem 0.25rem 0 0;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 0.0001%;
+  background: rgb(255, 97, 89);
+  width: $button-width-height;
+  height: $button-width-height;
+  z-index: $button-zindex;
+  margin: $button-margin;
+  border-radius: $button-border-radius;
+  position: $absolute-position;
+  top: $button-top;
   left: 1%;
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+  }
+  60% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+  }
+  60% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
 }

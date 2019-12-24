@@ -46,12 +46,13 @@ export default class AddMessage extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="AddPost">
+        <span style={{ color: "green" }}>→</span>
+        <div className="blink"></div>
         <input
           style={styleFunc(this.state.message)}
           className="add-message"
           type="text"
           name="message"
-          placeholder="Enter Message"
           value={inputHelper(this.state.message)}
           onChange={e => this.setState({ message: e.target.value })}
         />

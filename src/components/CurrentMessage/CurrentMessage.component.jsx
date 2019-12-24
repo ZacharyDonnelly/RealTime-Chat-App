@@ -8,7 +8,9 @@ const CurrentMessage = ({ message, user }) => {
         <div className="User--meta">
           <p>
             <span style={{ color: "#fff" }}>{user.displayName}</span>
-            <span style={{ color: "red", marginRight: 5 }}>@dev:</span>
+            <span style={{ color: " rgb(189, 227, 113)", marginRight: 5 }}>
+              @dev:
+            </span>
           </p>
         </div>
         <div className="Message--meta">
