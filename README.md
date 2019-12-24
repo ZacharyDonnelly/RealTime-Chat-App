@@ -12,5 +12,5 @@
 
 ## write tests
 
-![GitHub Logo](C:\Users\John Smith\Downloads\main-page.png)
-Format: ![Alt Text](url)
+<img src="C:\Users\John Smith\Downloads\main-page.png"
+     alt="main page" />
