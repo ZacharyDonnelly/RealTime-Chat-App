@@ -3,7 +3,7 @@ import React from "react";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
-import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
+import CustomSignUp from "../CustomLogin-Button/CustomSignUp-button.component";
 
 import "./SignUp.styles.scss";
 
@@ -73,7 +73,7 @@ export default class SignUp extends React.Component {
             required
           />
         </form>
-        <CustomLogin buttonClicked={this.handleSubmit} />
+        <CustomSignUp buttonClicked={this.handleSubmit} />
         <CustomButton choice={"up"} />
       </div>
     );

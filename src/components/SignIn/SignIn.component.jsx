@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormInput from "../form-input/form-input.component";
 
-import { signInWithGoogle, firestore } from "../../firebase/firebase.utils";
+import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
 import CustomButton from "../Custom-Buttons/CustomButton.component";
 import CustomLogin from "../CustomLogin-Button/CustomLogin-Button.component";
 
@@ -21,9 +21,7 @@ export default class SignIn extends Component {
 
   handleClicked = async () => {
     const { email, password } = this.state;
-    if (firestore.collection("users").includes(email, password)) {
-      alert("YES");
-    }
+    await auth.signInWithEmailAndPassword(email, password);
   };
 
   render() {
@@ -50,7 +48,7 @@ export default class SignIn extends Component {
             required
           />
         </form>
-        <CustomLogin choice={"Sign-in"} onClick={this.handleClicked} />
+        <CustomLogin choice={"Sign-in"} getClicked={this.handleClicked} />
         <CustomButton choice={"in"} onClick={signInWithGoogle} />
       </div>
     );

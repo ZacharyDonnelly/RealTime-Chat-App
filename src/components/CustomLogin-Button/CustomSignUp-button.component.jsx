@@ -2,9 +2,9 @@ import React from "react";
 
 import "./CustomLogin-Button.styles.scss";
 
-const CustomLogin = ({ choice, getClicked }) => {
+const CustomSignUp = ({ choice, buttonClicked }) => {
   return (
-    <div className="login-button" onClick={getClicked}>
+    <div className="login-button" onClick={buttonClicked}>
       <div className="icons-top envelope">
         <i className="fa fa-envelope fa-2x"></i>
       </div>
@@ -12,8 +12,8 @@ const CustomLogin = ({ choice, getClicked }) => {
     </div>
   );
 };
-CustomLogin.defaultProps = {
+CustomSignUp.defaultProps = {
   choice: "Sign-up"
 };
 
-export default CustomLogin;
+export default CustomSignUp;
