@@ -12,4 +12,4 @@
 
 ## write tests
 
-<img src="https://imgur.com/3RYaYy0" alt="front page" />
+[Imgur](https://imgur.com/3RYaYy0)
