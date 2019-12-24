@@ -11,3 +11,5 @@
 ## email authentication
 
 ## write tests
+
+Format: ![Main Page](C:\Users\John Smith\Downloads\main-page.png)
