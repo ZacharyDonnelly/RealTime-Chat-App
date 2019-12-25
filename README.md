@@ -7,10 +7,6 @@
 ![alt text](https://i.imgur.com/CuQFwg8.png)
 **Real Time Messaging Page** Real time messaging app
 
-# TODOS
+# A few render tests have been written with Jest.
 
-## mailchimp newsletter
-
-## email authentication emails
-
-## write tests
+## More to come

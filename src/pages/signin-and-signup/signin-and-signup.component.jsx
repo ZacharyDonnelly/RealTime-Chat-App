@@ -11,14 +11,16 @@ export default class SignInAndSignUp extends Component {
   state = {
     user: null
   };
+  unsubscribeFromAuth = null;
+
   componentDidMount = async () => {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ user });
     });
   };
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     this.unsubscribeFromAuth();
-  }
+  };
 
   render() {
     const { user } = this.state;

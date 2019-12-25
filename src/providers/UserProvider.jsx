@@ -9,6 +9,7 @@ class UserProvider extends React.Component {
   };
 
   unsubscribeFromAuth = null;
+  unsubscribeFromFirestore = null;
 
   componentDidMount = async () => {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -19,6 +20,7 @@ class UserProvider extends React.Component {
 
   componentWillUnmount = () => {
     this.unsubscribeFromAuth();
+    this.unsubscribeFromFirestore();
   };
   render() {
     const { user } = this.state;
