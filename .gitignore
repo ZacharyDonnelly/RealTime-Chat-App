@@ -12,7 +12,13 @@ coverage
 # production
 /build
 .firebase
+/firebase
 firebase
+.firebase.rc
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
 
 # misc
 .DS_Store
