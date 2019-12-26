@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<section
+  className="CurrentUser"
+>
+  <div
+    className="CurrentUser--profile"
+  >
+    <div
+      className="CurrentUser--information"
+    >
+      <h2
+        className="userDisplay"
+      >
+        Bill Murray
+      </h2>
+      <p
+        className="email"
+      >
+        billmurray@mailinator.com
+      </p>
+    </div>
+  </div>
+  <div>
+    <div />
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Sign Out
+    </a>
+  </div>
+</section>
+`;

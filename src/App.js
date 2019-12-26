@@ -1,17 +1,17 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MessagesProvider from "./providers/MessagesProvider";
 
-import "./index.css";
+import "./App.css";
 import UserProvider from "./providers/UserProvider";
 import HomePage from "./pages/homepage/homepage.component";
 import NotFound from "./pages/NotFound/NotFound.component";
 import SignInAndSignUp from "./pages/signin-and-signup/signin-and-signup.component";
 import Application from "./components/Application/Application.component";
 
-render(
+ReactDOM.render(
   <UserProvider>
     <MessagesProvider>
       <BrowserRouter>

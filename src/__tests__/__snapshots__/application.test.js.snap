@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="main-bg"
+>
+  <div>
+    <div
+      className="sign-in-and-sign-up"
+    >
+      <div
+        className="sign-in"
+      >
+        <h2
+          className="title"
+        >
+          I already have an account
+        </h2>
+        <span>
+          Sign in with your email and password
+        </span>
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="group"
+          >
+            <input
+              className="form-input"
+              name="email"
+              onChange={[Function]}
+              required={true}
+              type="email"
+              value=""
+            />
+            <label
+              className=" form-input-label"
+            >
+              Email
+            </label>
+          </div>
+          <div
+            className="group"
+          >
+            <input
+              className="form-input"
+              name="password"
+              onChange={[Function]}
+              required={true}
+              type="password"
+              value=""
+            />
+            <label
+              className=" form-input-label"
+            >
+              Password
+            </label>
+          </div>
+        </form>
+        <div
+          className="login-button"
+          onClick={[Function]}
+        >
+          <div
+            className="icons-top envelope"
+          >
+            <i
+              className="fa fa-envelope fa-2x"
+            />
+          </div>
+          <div
+            className="login-button-text"
+          >
+            Sign-in
+             With Email
+          </div>
+        </div>
+        <div
+          className="custom-button gplus"
+          onClick={[Function]}
+        >
+          <div
+            className="icons fa-gplus"
+          >
+            <i
+              className="fa fa-google"
+            />
+          </div>
+          <div
+            className="signtext"
+          >
+            Sign-
+            in
+             with Gmail
+          </div>
+        </div>
+      </div>
+      <div
+        className="sign-up"
+      >
+        <h2
+          className="title"
+        >
+          I do not have an account
+        </h2>
+        <span>
+          Sign up with your email and password
+        </span>
+        <form
+          className="sign-up-form"
+          onSubmit={[Function]}
+        >
+          <div
+            className="group"
+          >
+            <input
+              className="form-input"
+              name="displayName"
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <label
+              className=" form-input-label"
+            >
+              Display Name
+            </label>
+          </div>
+          <div
+            className="group"
+          >
+            <input
+              className="form-input"
+              name="email"
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <label
+              className=" form-input-label"
+            >
+              Email
+            </label>
+          </div>
+          <div
+            className="group"
+          >
+            <input
+              className="form-input"
+              name="password"
+              onChange={[Function]}
+              required={true}
+              type="password"
+              value=""
+            />
+            <label
+              className=" form-input-label"
+            >
+              Password
+            </label>
+          </div>
+        </form>
+        <div
+          className="login-button"
+          onClick={[Function]}
+        >
+          <div
+            className="icons-top envelope"
+          >
+            <i
+              className="fa fa-envelope fa-2x"
+            />
+          </div>
+          <div
+            className="login-button-text"
+          >
+            Sign-up
+             With Email
+          </div>
+        </div>
+        <div
+          className="custom-button gplus"
+          onClick={[Function]}
+        >
+          <div
+            className="icons fa-gplus"
+          >
+            <i
+              className="fa fa-google"
+            />
+          </div>
+          <div
+            className="signtext"
+          >
+            Sign-
+            up
+             with Gmail
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    className="all-messages"
+  >
+    <div
+      className="buttons"
+    >
+      <div
+        className="green"
+      />
+      <div
+        className="yellow"
+      />
+      <div
+        className="red"
+      />
+    </div>
+    <div
+      className="window"
+    >
+      <form
+        className="AddPost"
+        onSubmit={[Function]}
+      >
+        <span
+          style={
+            Object {
+              "color": "green",
+            }
+          }
+        >
+          →
+        </span>
+        <div
+          className="blink"
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        />
+        <input
+          autoComplete="off"
+          className="add-message"
+          name="message"
+          onChange={[Function]}
+          style={
+            Object {
+              "height": 30,
+            }
+          }
+          type="text"
+          value=""
+        />
+      </form>
+    </div>
+  </section>
+</div>
+`;

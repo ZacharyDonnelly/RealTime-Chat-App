@@ -3,6 +3,6 @@ import { create } from "react-test-renderer";
 import Auth from "../components/Auth/Auth.component";
 
 test("snapshot", () => {
-  const c = create(<Auth />);
-  expect(c.toJSON()).toMatchSnapshot();
+  const tree = create(<Auth />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

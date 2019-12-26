@@ -11,7 +11,7 @@ export default class AddMessage extends React.Component {
     user: ""
   };
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
     const { displayName, uid, email } = this.props;
     this.setState({
       user: {
@@ -21,25 +21,29 @@ export default class AddMessage extends React.Component {
       }
     });
   };
-  handleSubmit = async e => {
-    e.preventDefault();
+  handleSubmit = async event => {
+    event.preventDefault();
     if (!this.state.message) {
       alert("Please enter a message!");
     } else {
-      const { message } = this.state;
-      const { displayName, uid, email } = this.props;
-      let post = {
-        message,
-        user: {
-          displayName,
-          uid,
-          email
-        },
-        createdAt: new Date()
-      };
-      firestore.collection("messages").add(post);
-
-      this.setState({ message: "" });
+      try {
+        const { message } = this.state;
+        const { displayName, uid, email } = this.props;
+        let post = {
+          message,
+          user: {
+            displayName,
+            uid,
+            email
+          },
+          createdAt: new Date()
+        };
+        await firestore.collection("messages").add(post);
+      } catch (error) {
+        console.error("Error", error.message);
+      } finally {
+        this.setState({ message: "" });
+      }
     }
   };
 
@@ -56,7 +60,7 @@ export default class AddMessage extends React.Component {
           style={styleFunc(this.state.message)}
           className="add-message"
           type="text"
-          autocomplete="off"
+          autoComplete="off"
           name="message"
           value={inputHelper(this.state.message)}
           onChange={e => this.setState({ message: e.target.value })}

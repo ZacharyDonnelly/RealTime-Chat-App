@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<form
+  className="AddPost"
+  onSubmit={[Function]}
+>
+  <span
+    style={
+      Object {
+        "color": "green",
+      }
+    }
+  >
+    →
+  </span>
+  <div
+    className="blink"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+  <input
+    autoComplete="off"
+    className="add-message"
+    name="message"
+    onChange={[Function]}
+    style={
+      Object {
+        "height": 30,
+      }
+    }
+    type="text"
+    value=""
+  />
+</form>
+`;
