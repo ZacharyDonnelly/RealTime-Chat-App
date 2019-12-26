@@ -14,7 +14,7 @@ npm install
 ```
 
 
-# [Want to check out my live site? Click Here!][chattr.live]
+ # [Check out my live site here!](https://www.chattr.live)
 
 ![Splash](https://i.imgur.com/3RYaYy0.png)
 **Landing Page** Will be making slight alterations
