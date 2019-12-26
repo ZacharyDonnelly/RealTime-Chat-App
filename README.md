@@ -1,4 +1,4 @@
-# Want to check out my live site? Click Here!(www.chattr.live)
+# Want to check out my live site? Click Here!www.chattr.live
 
 ![alt text](https://i.imgur.com/3RYaYy0.png)
 **Landing Page** Will be making slight alterations
