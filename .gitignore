@@ -1,5 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+functions/node_modules
+/functions
+.firebaserc
+firebase-debug.log
+.firebase
+/firestore.rules
+.firestore.rules
+
 # dependencies
 /node_modules
 /.pnp
@@ -11,13 +19,7 @@ coverage
 
 # production
 /build
-/.firebase
-.firebase
-/functions
-functions
-.functions
-.firebase.rules
-/.firebase.rules
+
 
 # misc
 .DS_Store
