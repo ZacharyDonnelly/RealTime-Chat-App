@@ -14,7 +14,7 @@ npm install
 ```
 
 
- # [Check out my live site here!](https://www.chattr.live)
+ # [Check out my live site here!](https://personal-react-fb.web.app/)
 
 ![Splash](https://i.imgur.com/3RYaYy0.png)
 **Landing Page** Will be making slight alterations
