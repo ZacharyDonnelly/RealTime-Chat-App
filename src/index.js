@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MessagesProvider from "./providers/MessagesProvider";
 
-import "./App.css";
+import "./index.css";
 import UserProvider from "./providers/UserProvider";
 import HomePage from "./pages/homepage/homepage.component";
 import NotFound from "./pages/NotFound/NotFound.component";

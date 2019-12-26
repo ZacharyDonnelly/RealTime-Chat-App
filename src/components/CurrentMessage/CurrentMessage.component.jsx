@@ -1,7 +1,7 @@
 import React from "react";
 import "./CurrentMessage.styles.scss";
 
-const CurrentMessage = ({ message, user }) => {
+const CurrentMessage = ({ message, user, createdAt }) => {
   return (
     <div className="message-container">
       <article className="messages">
