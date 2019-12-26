@@ -14,7 +14,7 @@ You can also use [NPM](https://www.npmjs.com) to install dependencies.
 
 
 You can also use [NPM](https://www.npmjs.com) to install dependencies.
->>>>>>> 881634adec808f547c559f11584682a48c6e1221
+
 ```
 npm install
 ```
