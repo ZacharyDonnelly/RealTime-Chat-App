@@ -21,7 +21,7 @@ You can also use [NPM](https://www.npmjs.com) to install dependencies.
 npm install
 ```
 
-# [Check out the live site here!](https://personal-react-fb.web.app/)
+# [Check out the live site here!](https://chattr.live)
 
 ![Splash](https://i.imgur.com/3RYaYy0.png)
 **Landing Page** Will be making slight alterations
