@@ -14,9 +14,6 @@ yarn
 
 You can also use [NPM](https://www.npmjs.com) to install dependencies.
 
-
-You can also use [NPM](https://www.npmjs.com) to install dependencies.
-
 ```
 npm install
 ```
