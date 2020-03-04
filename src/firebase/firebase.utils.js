@@ -3,16 +3,7 @@ import "firebase/firestore";
 import "firebase/auth";
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDwstwp0mXf_tBolc0CJ7uNl0PoW5b0dm0",
-  authDomain: "personal-react-fb.firebaseapp.com",
-  databaseURL: "https://personal-react-fb.firebaseio.com",
-  storageBucket: "personal-react-fb.appspot.com",
-  projectId: "personal-react-fb",
-  messagingSenderId: "1029893914121",
-  appId: "1:1029893914121:web:b596b1100f19f0080902d8",
-  measurementId: "G-NKDD92L4CN"
-};
+const firebaseConfig = {};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
