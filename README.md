@@ -2,6 +2,16 @@
 
 ![status](https://img.shields.io/badge/Status-Up-blue)   ![license](https://img.shields.io/badge/License-MIT-brightgreen)          ![updated](https://img.shields.io/badge/Updated-Today-brightgreen )  ![eslint](https://img.shields.io/badge/eslint-^3.0.0-blue) ![website](https://img.shields.io/badge/Website-Running-brightgreen)
 
+<hr />
+
+# Motivation
+This project was my first fullstack application. At the time I was using Discord often, and was genuinely curious how difficult a barebones version would be to create. Which eventually led me down the path of Firebase. The setup/config of the "serverless" approach Firebase has taken was extremely easy to use. Considering at the time of building this app I had minimal backend/database experience. Overall, I am happy with how it turned out.
+
+
+## Stack
+JavaScript, React, SCSS, & Firebase/Firestore. 
+
+<hr />
 
 ## Installation
 
