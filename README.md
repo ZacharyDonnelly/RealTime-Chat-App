@@ -13,6 +13,20 @@ JavaScript, React, SCSS, & Firebase/Firestore.
 
 <hr />
 
+# [Check out the live site here!](https://chattr.live)
+
+![Splash](https://i.imgur.com/3RYaYy0.png)
+**Landing Page** Will be making slight alterations
+
+![Sign Up](https://i.imgur.com/tW6RR27.png)
+**Signin/signup Page** Using firebase Oauth and firebase email/password sign in
+
+![Messaging page](https://i.imgur.com/u4ODLSS.png)
+**Real Time Messaging Page** Real time messaging app
+
+<hr />
+
+
 ## Installation
 
 Use the package manager [Yarn](https://yarnpkg.com/lang/en/) to install dependencies.
@@ -27,17 +41,6 @@ You can also use [NPM](https://www.npmjs.com) to install dependencies.
 ```
 npm install
 ```
-
-# [Check out the live site here!](https://chattr.live)
-
-![Splash](https://i.imgur.com/3RYaYy0.png)
-**Landing Page** Will be making slight alterations
-
-![Sign Up](https://i.imgur.com/tW6RR27.png)
-**Signin/signup Page** Using firebase Oauth and firebase email/password sign in
-
-![Messaging page](https://i.imgur.com/u4ODLSS.png)
-**Real Time Messaging Page** Real time messaging app
 
 ## Contributing
 
