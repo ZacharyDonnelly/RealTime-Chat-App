@@ -26,6 +26,7 @@ JavaScript, React, SCSS, & Firebase/Firestore.
 
 <hr />
 
+# Usage
 
 ## Installation
 
